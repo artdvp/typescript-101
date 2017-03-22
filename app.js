@@ -1,3 +1,13 @@
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 //Variable
 var names = "Hello TS";
 var count = 5000;
@@ -117,3 +127,55 @@ var emp2 = new Employee2(105, "bonbonpa", 1, 40000);
 emp2.display();
 var emp3 = new Employee2(107, "dvp", 0, 20000);
 emp3.display();
+//Chapter 10 Getter Setter
+var Employee3 = (function () {
+    //constructor
+    function Employee3(id, name, sex, salary) {
+        this.id = id;
+        this.name = name;
+        this.sex = sex;
+        this.salary = salary;
+        console.log("create object");
+    }
+    //method
+    Employee3.prototype.display = function () {
+        console.log("Id :" + this.id);
+        console.log("Name :" + this.name);
+        console.log("Sex :" + this.sex);
+        console.log("Saraly :" + this.salary);
+    };
+    //method getter 
+    Employee3.prototype.setDepartment = function (dep) {
+        this.department = dep;
+    };
+    //method setter
+    Employee3.prototype.getDepartment = function () {
+        return this.department;
+    };
+    return Employee3;
+}());
+var emp4 = new Employee3(105, "bonbonpa", 1, 40000);
+emp4.setDepartment("Developer");
+emp4.display();
+console.log(emp4.getDepartment());
+//let emp5 = new Employee3(107,"dvp",0,20000);
+//emp3.display();
+//chapter 11 Extends
+var Animal = (function () {
+    function Animal(n) {
+        this.name = n;
+    }
+    Animal.prototype.disp = function () {
+        console.log("My Name is " + this.name);
+    };
+    return Animal;
+}());
+var Cat = (function (_super) {
+    __extends(Cat, _super);
+    function Cat() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return Cat;
+}(Animal));
+var obj = new Cat("Cat Obj");
+obj.disp();

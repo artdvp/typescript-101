@@ -167,3 +167,69 @@ emp2.display();
 
 let emp3 = new Employee2(107,"dvp",0,20000);
 emp3.display();
+
+//Chapter 10 Getter Setter
+
+class Employee3{
+    //Property
+    private id:number;
+    private name:string;
+    private sex:number;
+    private salary:number;
+    private department:string;
+    //constructor
+    constructor(id:number,name:string,sex:number,salary:number){
+        this.id = id ;
+        this.name = name ; 
+        this.sex = sex;
+        this.salary = salary;
+        console.log("create object");
+    }
+    //method
+    display():void{
+        console.log("Id :" + this.id);
+        console.log("Name :" + this.name);
+        console.log("Sex :" + this.sex);
+        console.log("Saraly :" + this.salary);
+    }
+    
+    //method getter 
+    setDepartment(dep:string):void{
+        this.department = dep;
+    }
+    //method setter
+    getDepartment():string{
+        return this.department;
+    }
+    
+}
+
+let emp4 = new Employee3(105,"bonbonpa",1,40000);
+emp4.setDepartment("Developer");
+
+emp4.display();
+console.log(emp4.getDepartment());
+
+//let emp5 = new Employee3(107,"dvp",0,20000);
+//emp3.display();
+
+//chapter 11 Extends
+
+class Animal{
+    public name:string;
+    
+    constructor(n:string){
+        this.name= n ;
+    }
+     disp():void{
+        console.log("My Name is " + this.name);
+    }
+}
+
+class Cat extends Animal {
+   
+}
+
+var obj = new Cat("Cat Obj");
+obj.disp();
+
