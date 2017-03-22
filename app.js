@@ -203,3 +203,19 @@ var Catx = (function (_super) {
 //class children call method Parent
 var objx = new Catx("Catx Obj");
 objx.display();
+//chapter 13 Static Keyword
+var Windows = (function () {
+    function Windows() {
+    }
+    Windows.showWidth = function () {
+        console.log("Width : " + Windows.width);
+    };
+    Windows.showHeight = function () {
+        console.log("Height : " + Windows.height);
+    };
+    return Windows;
+}());
+Windows.width = 1024;
+Windows.height = 768;
+Windows.showWidth();
+Windows.showHeight();
