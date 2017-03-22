@@ -63,14 +63,14 @@ function addProduct(id, name, price) {
 addProduct(104, "FF");
 addProduct(301, "EGG", 10);
 //chapter 7 Rest Parameter Function
-//basic
+//Basic Function
 function addNumber(num1, num2) {
     var sum = 0;
     sum = num1 + num2;
     console.log(sum);
 }
 addNumber(1200, 7);
-//rest 
+//Rest Parameter Function 
 function addNumber2() {
     var num = [];
     for (var _i = 0; _i < arguments.length; _i++) {
@@ -85,3 +85,12 @@ function addNumber2() {
 }
 addNumber2(23, 45);
 addNumber2(1, 2, 3, 4, 5, 6, 7, 8, 9);
+//Chapter 8  Class Object OOP Programming
+var Employee = (function () {
+    //constructor
+    function Employee() {
+        console.log("create object");
+    }
+    return Employee;
+}());
+var emp1 = new Employee();

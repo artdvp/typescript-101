@@ -120,3 +120,18 @@ function addNumber2(...num:number[]){
 
 addNumber2(23,45);
 addNumber2(1,2,3,4,5,6,7,8,9);
+
+//Chapter 8  Class Object OOP Programming
+class Employee{
+    //Property
+    private id:number;
+    private name:string;
+    private sex:number;
+    private saraly:number;
+    //constructor
+    constructor(){
+        console.log("create object");
+    }
+}
+
+let emp1 = new Employee();
