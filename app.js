@@ -179,3 +179,25 @@ var Cat = (function (_super) {
 }(Animal));
 var obj = new Cat("Cat Obj");
 obj.disp();
+//chapter 12 Override Method
+var AnimalXO = (function () {
+    function AnimalXO(n) {
+        this.name = n;
+    }
+    AnimalXO.prototype.disp = function () {
+        console.log("My Name is " + this.name);
+    };
+    return AnimalXO;
+}());
+var Catx = (function (_super) {
+    __extends(Catx, _super);
+    function Catx() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Catx.prototype.disp = function () {
+        console.log("My Name is " + this.name);
+    };
+    return Catx;
+}(AnimalXO));
+var objx = new Catx("Catx Obj");
+objx.disp();

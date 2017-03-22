@@ -1,7 +1,3 @@
-
-
-
-
 # Typescript 101
 
 ## By Kong Ruksiam

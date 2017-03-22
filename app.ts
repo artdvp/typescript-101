@@ -233,3 +233,25 @@ class Cat extends Animal {
 var obj = new Cat("Cat Obj");
 obj.disp();
 
+//chapter 12 Override Method
+
+
+class AnimalXO{
+    public name:string;
+    
+    constructor(n:string){
+        this.name= n ;
+    }
+     disp():void{
+        console.log("My Name is " + this.name);
+    }
+}
+
+class Catx extends AnimalXO {
+    disp():void{
+        console.log("My Name is " + this.name);
+    }
+}
+
+var objx = new Catx("Catx Obj");
+objx.disp();
