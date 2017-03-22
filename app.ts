@@ -26,4 +26,8 @@ var employee:string[] =  ["A", "B", "C"];
 employee.push("D");
 employee.push("GG");
 employee.push("500");
+
+
+var employee2:any[] =  ["A", "B", "C"];
+employee2.push(1000);
 console.log(employee.toString());
