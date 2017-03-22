@@ -53,3 +53,13 @@ let p1:Player={
 console.log(p1.realName);
 console.log(p1.hp);
 console.log(p1.attack);
+
+
+//chapter 5 Enumerations
+//
+enum Color{
+    red=10,
+    green,
+    blue,
+}
+console.log(Color.red);

@@ -31,3 +31,12 @@ var p1 = {
 console.log(p1.realName);
 console.log(p1.hp);
 console.log(p1.attack);
+//chapter 5 Enumerations
+//
+var Color;
+(function (Color) {
+    Color[Color["red"] = 10] = "red";
+    Color[Color["green"] = 11] = "green";
+    Color[Color["blue"] = 12] = "blue";
+})(Color || (Color = {}));
+console.log(Color.red);
