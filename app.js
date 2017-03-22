@@ -36,7 +36,8 @@ console.log(p1.attack);
 var Color;
 (function (Color) {
     Color[Color["red"] = 10] = "red";
-    Color[Color["green"] = 11] = "green";
-    Color[Color["blue"] = 12] = "blue";
+    Color[Color["green"] = 15] = "green";
+    Color[Color["blue"] = 20] = "blue";
 })(Color || (Color = {}));
 console.log(Color.red);
+console.log("Status " + Color.green);

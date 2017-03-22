@@ -59,7 +59,8 @@ console.log(p1.attack);
 //
 enum Color{
     red=10,
-    green,
-    blue,
+    green=15,
+    blue=20,
 }
 console.log(Color.red);
+console.log("Status " + Color.green);
