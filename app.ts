@@ -21,7 +21,7 @@ document.write("strstatus is Type: " + typeof(strstatus) + "<br>");
 
 
 
-//charp 3 Array
+//chap 3 Array
 var employee:string[] =  ["A", "B", "C"];
 employee.push("D");
 employee.push("GG");
@@ -31,3 +31,25 @@ employee.push("500");
 var employee2:any[] =  ["A", "B", "C"];
 employee2.push(1000);
 console.log(employee.toString());
+
+//chap 4 Interface Basic
+// structure is make you only assign data every pattern
+interface Player{
+    realName : string;
+    hp:number;
+    weapon: string;
+    attack:()=>string
+}
+
+let p1:Player={
+    realName : "bonbonpa",
+    hp: 2000,
+    weapon: "Hammer",
+    attack: ():string=>{
+        return "player attack";
+    }
+}
+
+console.log(p1.realName);
+console.log(p1.hp);
+console.log(p1.attack);
