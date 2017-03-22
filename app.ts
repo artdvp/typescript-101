@@ -242,16 +242,18 @@ class AnimalXO{
     constructor(n:string){
         this.name= n ;
     }
-     disp():void{
-        console.log("My Name is " + this.name);
+     display():void{
+        console.log("My Name is Super Class");
     }
 }
 
 class Catx extends AnimalXO {
-    disp():void{
-        console.log("My Name is " + this.name);
+    display():void{
+        super.display();
+        console.log("My Name is Cat Class");
     }
 }
 
+//class children call method Parent
 var objx = new Catx("Catx Obj");
-objx.disp();
+objx.display();

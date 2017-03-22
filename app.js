@@ -184,8 +184,8 @@ var AnimalXO = (function () {
     function AnimalXO(n) {
         this.name = n;
     }
-    AnimalXO.prototype.disp = function () {
-        console.log("My Name is " + this.name);
+    AnimalXO.prototype.display = function () {
+        console.log("My Name is Super Class");
     };
     return AnimalXO;
 }());
@@ -194,10 +194,12 @@ var Catx = (function (_super) {
     function Catx() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    Catx.prototype.disp = function () {
-        console.log("My Name is " + this.name);
+    Catx.prototype.display = function () {
+        _super.prototype.display.call(this);
+        console.log("My Name is Cat Class");
     };
     return Catx;
 }(AnimalXO));
+//class children call method Parent
 var objx = new Catx("Catx Obj");
-objx.disp();
+objx.display();
