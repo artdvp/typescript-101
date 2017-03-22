@@ -47,7 +47,7 @@ var numberConst;
     numberConst[numberConst["e"] = 2.71] = "e";
 })(numberConst || (numberConst = {}));
 console.log(numberConst.pi * (6 * 6));
-//chapter 6 function
+//chapter 6 Optional Parameter function
 function showMessage() {
     console.log("Typescript Hello");
 }
@@ -62,3 +62,10 @@ function addProduct(id, name, price) {
 }
 addProduct(104, "FF");
 addProduct(301, "EGG", 10);
+//chapter 7 Rest Parameter Function
+function addNumber(num1, num2) {
+    var sum = 0;
+    sum = num1 + num2;
+    console.log(sum);
+}
+addNumber(1200, 7);

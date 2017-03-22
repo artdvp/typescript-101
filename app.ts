@@ -72,7 +72,7 @@ enum numberConst{
 
 console.log(numberConst.pi * (6*6));
 
-//chapter 6 function
+//chapter 6 Optional Parameter function
 
 function showMessage(){
     console.log("Typescript Hello");
@@ -93,3 +93,14 @@ function addProduct(id:number,name?:string,price?:number){
 
 addProduct(104,"FF");
 addProduct(301,"EGG", 10);
+
+
+//chapter 7 Rest Parameter Function
+
+function addNumber(num1:number,num2:number){
+    let sum:number = 0;
+    sum = num1 + num2;
+    console.log(sum);
+}
+
+addNumber(1200,7);
