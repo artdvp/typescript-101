@@ -63,9 +63,25 @@ function addProduct(id, name, price) {
 addProduct(104, "FF");
 addProduct(301, "EGG", 10);
 //chapter 7 Rest Parameter Function
+//basic
 function addNumber(num1, num2) {
     var sum = 0;
     sum = num1 + num2;
     console.log(sum);
 }
 addNumber(1200, 7);
+//rest 
+function addNumber2() {
+    var num = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        num[_i] = arguments[_i];
+    }
+    var sum = 0;
+    var i;
+    for (i = 0; i < num.length; i++) {
+        sum += num[i];
+    }
+    console.log("Summary :" + sum);
+}
+addNumber2(23, 45);
+addNumber2(1, 2, 3, 4, 5, 6, 7, 8, 9);

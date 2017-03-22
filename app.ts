@@ -97,6 +97,7 @@ addProduct(301,"EGG", 10);
 
 //chapter 7 Rest Parameter Function
 
+//Basic Function
 function addNumber(num1:number,num2:number){
     let sum:number = 0;
     sum = num1 + num2;
@@ -104,3 +105,18 @@ function addNumber(num1:number,num2:number){
 }
 
 addNumber(1200,7);
+
+//Rest Parameter Function 
+function addNumber2(...num:number[]){
+   let sum:number=0;
+   let i ;
+   for(i=0 ; i<num.length; i++)
+   {
+       sum += num[i];
+   }
+   console.log("Summary :" + sum );
+}
+
+
+addNumber2(23,45);
+addNumber2(1,2,3,4,5,6,7,8,9);
