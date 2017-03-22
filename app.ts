@@ -134,4 +134,36 @@ class Employee{
     }
 }
 
-let emp1 = new Employee();
+let emp1 = new Employee
+
+
+//Chapter 9 Constructor & Method
+
+class Employee2{
+    //Property
+    private id:number;
+    private name:string;
+    private sex:number;
+    private salary:number;
+    //constructor
+    constructor(id:number,name:string,sex:number,salary:number){
+        this.id = id ;
+        this.name = name ; 
+        this.sex = sex;
+        this.salary = salary;
+        console.log("create object");
+    }
+    //method
+    display():void{
+        console.log("Id :" + this.id);
+        console.log("Name :" + this.name);
+        console.log("Sex :" + this.sex);
+        console.log("Saraly :" + this.salary);
+    }
+}
+
+let emp2 = new Employee2(105,"bonbonpa",1,40000);
+emp2.display();
+
+let emp3 = new Employee2(107,"dvp",0,20000);
+emp3.display();

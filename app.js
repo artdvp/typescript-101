@@ -93,4 +93,27 @@ var Employee = (function () {
     }
     return Employee;
 }());
-var emp1 = new Employee();
+var emp1 = new Employee;
+//Chapter 9 Constructor & Method
+var Employee2 = (function () {
+    //constructor
+    function Employee2(id, name, sex, salary) {
+        this.id = id;
+        this.name = name;
+        this.sex = sex;
+        this.salary = salary;
+        console.log("create object");
+    }
+    //method
+    Employee2.prototype.display = function () {
+        console.log("Id :" + this.id);
+        console.log("Name :" + this.name);
+        console.log("Sex :" + this.sex);
+        console.log("Saraly :" + this.salary);
+    };
+    return Employee2;
+}());
+var emp2 = new Employee2(105, "bonbonpa", 1, 40000);
+emp2.display();
+var emp3 = new Employee2(107, "dvp", 0, 20000);
+emp3.display();
