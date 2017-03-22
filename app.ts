@@ -52,7 +52,7 @@ let p1:Player={
 
 console.log(p1.realName);
 console.log(p1.hp);
-console.log(p1.attack);
+console.log(p1.attack());
 
 
 //chapter 5 Enumerations
@@ -64,3 +64,10 @@ enum Color{
 }
 console.log(Color.red);
 console.log("Status " + Color.green);
+
+enum numberConst{
+    pi=3.14,
+    e=2.71
+}
+
+console.log(numberConst.pi * (6*6));

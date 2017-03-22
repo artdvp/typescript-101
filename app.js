@@ -30,7 +30,7 @@ var p1 = {
 };
 console.log(p1.realName);
 console.log(p1.hp);
-console.log(p1.attack);
+console.log(p1.attack());
 //chapter 5 Enumerations
 //
 var Color;
@@ -41,3 +41,9 @@ var Color;
 })(Color || (Color = {}));
 console.log(Color.red);
 console.log("Status " + Color.green);
+var numberConst;
+(function (numberConst) {
+    numberConst[numberConst["pi"] = 3.14] = "pi";
+    numberConst[numberConst["e"] = 2.71] = "e";
+})(numberConst || (numberConst = {}));
+console.log(numberConst.pi * (6 * 6));
