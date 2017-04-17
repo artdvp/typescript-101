@@ -1,4 +1,4 @@
-# Typescript 101
+# Typescript 101 - NdinG
 
 ## [Typescript By Kong Ruksiam](https://www.youtube.com/playlist?list=PLEE74DyIkwEn4NOiqo43uxvSzyE0eyUQj)
 
